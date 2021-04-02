@@ -19,6 +19,9 @@
 
 /* Begin PBXFileReference section */
 		747FC4A82616881E00B0CC2D /* Countries.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Countries.txt; sourceTree = "<group>"; };
+		747FC4B32616C01800B0CC2D /* viewControllerMain.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = viewControllerMain.png; sourceTree = "<group>"; };
+		747FC4B42616C01800B0CC2D /* detailControllerFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = detailControllerFlag.png; sourceTree = "<group>"; };
+		747FC4B52616C01800B0CC2D /* detailControllerShared.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = detailControllerShared.png; sourceTree = "<group>"; };
 		748CA9C9261407E500064F36 /* FlagLearn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlagLearn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		748CA9CC261407E500064F36 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		748CA9CE261407E500064F36 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -42,9 +45,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		747FC4B22616C01800B0CC2D /* screenshots */ = {
+			isa = PBXGroup;
+			children = (
+				747FC4B32616C01800B0CC2D /* viewControllerMain.png */,
+				747FC4B42616C01800B0CC2D /* detailControllerFlag.png */,
+				747FC4B52616C01800B0CC2D /* detailControllerShared.png */,
+			);
+			path = screenshots;
+			sourceTree = "<group>";
+		};
 		748CA9C0261407E500064F36 = {
 			isa = PBXGroup;
 			children = (
+				747FC4B22616C01800B0CC2D /* screenshots */,
 				748CA9E1261409A000064F36 /* README.md */,
 				748CA9CB261407E500064F36 /* FlagLearn */,
 				748CA9CA261407E500064F36 /* Products */,

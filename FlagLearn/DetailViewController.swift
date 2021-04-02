@@ -15,7 +15,10 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        imageView.layer.borderWidth = 1
+        imageView.layer.borderColor = UIColor.lightGray.cgColor
+        imageView.layer.cornerRadius = 5.0
+        
         // Do any additional setup after loading the view.
         if let imageToLoad = selectedImage {
             imageView.image = UIImage(named: imageToLoad)

@@ -13,16 +13,16 @@ class ViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        title = "Learn Flag"
+        
         // Do any additional setup after loading the view.
-//        flags += ["estonia","france","germany","ireland","italy","monaco","poland","russia","spain","uk","us"]
         if let countryFileURL = Bundle.main.url(forResource: "Countries", withExtension: "txt") {
             if let countryContents = try? String(contentsOf: countryFileURL) {
                 let country = countryContents.components(separatedBy: "\n")
                 print(country)
                 for name in country where name != "" {
                     flags.append(name)
-                    
-
                 }
             }
         }

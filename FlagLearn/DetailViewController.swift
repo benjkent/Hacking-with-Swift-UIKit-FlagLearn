@@ -15,6 +15,9 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(shareTapped))
+        
         imageView.layer.borderWidth = 1
         imageView.layer.borderColor = UIColor.lightGray.cgColor
         imageView.layer.cornerRadius = 5.0
@@ -26,7 +29,16 @@ class DetailViewController: UIViewController {
         }
         
     }
-    
+    @objc func shareTapped() {
+        guard let image = imageView.image?.jpegData(compressionQuality: 0.8) else {
+            print("no image found")
+            return
+        }
+        // Reminder: add Privacy policy to the info.plist 
+        let vc = UIActivityViewController(activityItems: [image], applicationActivities: [])
+        vc.popoverPresentationController?.barButtonItem = navigationItem.rightBarButtonItem
+        present(vc, animated: true)
+    }
 
     /*
     // MARK: - Navigation

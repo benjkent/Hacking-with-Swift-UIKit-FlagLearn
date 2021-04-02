@@ -26,6 +26,7 @@ class ViewController: UITableViewController {
                 }
             }
         }
+        
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -35,6 +36,13 @@ class ViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         cell.textLabel?.text = flags[indexPath.row]
+        cell.detailTextLabel?.text = ""
+        cell.imageView?.image = UIImage(named: flags[indexPath.row].lowercased())
+        
+        cell.imageView?.layer.borderWidth = 1
+        cell.imageView?.layer.borderColor = UIColor.darkGray.cgColor
+        cell.imageView?.layer.cornerRadius = 5.0
+        
         return cell
     }
     

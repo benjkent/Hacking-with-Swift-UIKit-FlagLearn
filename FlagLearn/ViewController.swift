@@ -10,7 +10,6 @@ import UIKit
 class ViewController: UITableViewController {
 
     var flags = [String]()
-    var flagList = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,8 +20,8 @@ class ViewController: UITableViewController {
                 let country = countryContents.components(separatedBy: "\n")
                 print(country)
                 for name in country where name != "" {
-                    flags.append(name.lowercased())
-                    flagList.append(name)
+                    flags.append(name)
+                    
 
                 }
             }
@@ -35,13 +34,13 @@ class ViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        cell.textLabel?.text = flagList[indexPath.row]
+        cell.textLabel?.text = flags[indexPath.row]
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let vc = storyboard?.instantiateViewController(identifier: "Detail") as? DetailViewController{
-            vc.selectedImage = flags[indexPath.row]
+            vc.selectedImage = flags[indexPath.row].lowercased()
             navigationController?.pushViewController(vc, animated: true)
         }
     }

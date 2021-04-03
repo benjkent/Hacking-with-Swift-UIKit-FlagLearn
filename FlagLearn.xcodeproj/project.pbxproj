@@ -32,6 +32,7 @@
 		748CA9DA261407E600064F36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		748CA9E1261409A000064F36 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		748CA9E32614146400064F36 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		74EC506E2617F49B00A63C42 /* viewController-flagIcons.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "viewController-flagIcons.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +49,7 @@
 		747FC4B22616C01800B0CC2D /* screenshots */ = {
 			isa = PBXGroup;
 			children = (
+				74EC506E2617F49B00A63C42 /* viewController-flagIcons.png */,
 				747FC4B32616C01800B0CC2D /* viewControllerMain.png */,
 				747FC4B42616C01800B0CC2D /* detailControllerFlag.png */,
 				747FC4B52616C01800B0CC2D /* detailControllerShared.png */,
